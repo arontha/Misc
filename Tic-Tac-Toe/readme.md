@@ -25,10 +25,15 @@ As a proof of concept, I developed an AI to play the classic game of tic-tac-toe
 
 ### Failures and Successes:
 1. Initiatially, the random AI was truly 'random', meaning even if a move was available to immediately win the game, the AI would not take it. Despite this naiveté, the AI still performed decently, about as well as a school child, but it could not compete with a smart human adult tic-tac-toe player and would still lose. As a result, the ranadom AI needed a slight logic boost, and the random play now also evaluates if any immediately moves win the game, and takes the winning move instead of the random move if available. 
-2. An Smart AI must play against different styles, otherwise its training data is overfitted. Initially, I just had the smarter AI only play against itself, but that did not generate a smarter AI. By making it also play against the 'dumber' AI, it now had the training data to perform adequately vs. a human.
+2. A Smart AI must play against different styles, otherwise its training data is overfitted. Initially, I just had the smarter AI only play against itself, but that did not generate a smarter AI. By making it also play against the 'dumber' AI, it now had the training data to perform adequately vs. a human.
+3. For training purposes, the smart AI was too deterministic and an occassional random element in the gameplay while training the AI improved the dataset capture and the resulting gameplay.
 
 ### "Smart" AI
 The way the Smart AI uses the data is as follows:
 1. If an immediate move wins, take it.
-2. If an immediate move ties, take it.
+2. If a move has won in the past but has never lost, take it. 
+3. If a move is much more likely to win than lose, take it.
+4. If an immediate move ties, take it.
+5. Pick a random move that doesn't setup a loss.
+6. Pick a random move.
 
