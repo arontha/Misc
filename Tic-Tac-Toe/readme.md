@@ -24,7 +24,8 @@ As a proof of concept, I developed an AI to play the classic game of tic-tac-toe
 - each directory contains the results of the 2 trainings saved as x_wins, o_wins, and ties .txt files
 
 ### Failures and Successes:
-Initiatially, the random AI was truly 'random', meaning even if a move was available to immediately win the game, the AI would not take it. Despite this naiveté, the AI still performed decently, about as well as a school child, but it could not compete with a smart human adult tic-tac-toe player and would still lose. As a result, the ranadom AI needed a slight logic boost, and the random play now also evaluates if any immediately moves win the game, and takes the winning move instead of the random move if available. 
+1. Initiatially, the random AI was truly 'random', meaning even if a move was available to immediately win the game, the AI would not take it. Despite this naiveté, the AI still performed decently, about as well as a school child, but it could not compete with a smart human adult tic-tac-toe player and would still lose. As a result, the ranadom AI needed a slight logic boost, and the random play now also evaluates if any immediately moves win the game, and takes the winning move instead of the random move if available. 
+2. An Smart AI must play against different styles, otherwise its training data is overfitted. Initially, I just had the smarter AI only play against itself, but that did not generate a smarter AI. By making it also play against the 'dumber' AI, it now had the training data to perform adequately vs. a human.
 
 ### "Smart" AI
 The way the Smart AI uses the data is as follows:
