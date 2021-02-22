@@ -22,3 +22,12 @@ As a proof of concept, I developed an AI to play the classic game of tic-tac-toe
 
 **4. x_wins, o_wins, and ties directories**
 - each directory contains the results of the 2 trainings saved as x_wins, o_wins, and ties .txt files
+
+### Failures and Successes:
+Initiatially, the random AI was truly 'random', meaning even if a move was available to immediately win the game, the AI would not take it. Despite this naiveté, the AI still performed decently, about as well as a school child, but it could not compete with a smart human adult tic-tac-toe player and would still lose. As a result, the ranadom AI needed a slight logic boost, and the random play now also evaluates if any immediately moves win the game, and takes the winning move instead of the random move if available. 
+
+### "Smart" AI
+The way the Smart AI uses the data is as follows:
+1. If an immediate move wins, take it.
+2. If an immediate move ties, take it.
+
